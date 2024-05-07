@@ -242,7 +242,6 @@
   }
 
 let language = {
-  let uk-date = [#translate-date(7, 2014) -- #translate-date(8, 2014)]
   translate(
     en: [- IELTS: 7.5 (L: 8.5 R: 8.5 W: 7.0 S: 6.0)],
     zh: [- 雅思：7.5（听力: 8.5 阅读: 8.5 写作: 7.0 口语: 6.0）]
@@ -251,39 +250,13 @@ let language = {
     en: [
     - CET 6: 564
     - CET 4: 585
-    - #cventry(
-        tl: [Traveling and studying in UK],
-        tr: uk-date,
-      )[]
     ],
     zh: [
     - CET 6: 564
     - CET 4: 585
-    - #cventry(
-        tl: [英国游学经历],
-        tr: uk-date,
-      )[]
     ]
   )
 }
-
-let situation = translate(
-  en:[todo],
-  zh:[
-    - 我在新航道B,C班经历过3个月的雅思备考，具有较完整的雅思备考知识体系，在今年3月份取得7.5的成绩 \
-      （听力: 8.5 阅读: 8.5 写作: 7.0 口语: 6.0）
-    - CET 4: 585/710 (全国排名10%-17%), CET 6: 564/710 (全国排名10%-16%)
-    - 我在本科时学过 A-Level Computer Science, A-Level Mathematics (Further), AP Computer Science, AP Calculus AB/BC 所涉及的全部内容，并且经常阅读微积分、计算机科学的英文教材，熟悉用英语教理工科的方法。
-    - 我希望当上述AP/A-Level学科或雅思的助教、教师。虽然目前缺乏实战教学经验，但是我相信通过培训，可以在实际教学中取得良好的效果。
-  ]
-)
-
-let self-intro = translate(
-  en:[todo],
-  zh:[
-    我性格开朗，知识面广泛，具有良好的沟通能力和团队合作精神，能够很好地适应不同的教学环境。我英语基础扎实，具备用英语教授数学和计算机科学的能力。我曾积极参与各类学术竞赛，获得过优异的成绩，这些经历加深了我对数学和计算机科学的热爱。在教学方面，我善于激发学生的学习兴趣，乐于与学生分享知识，帮助他们取得学业上的成功。
-  ]
-)
 
   // Start of the document
 
@@ -292,12 +265,6 @@ let self-intro = translate(
   [#link("mailto:chenzhiy2001@qq.com")[chenzhiy2001\@qq.com] $dot.c$ #iconlink("https://github.com/chenzhiy2001", icon: github)]
 
   edu
-
-  translate(en: [== Brief Situation], zh: [== 个人情况 & 教授科目])
-  situation
-
-  translate(en: [== Self Introduction], zh: [== 自我介绍])
-  self-intro
 
   translate(en: [== Honors and Awards], zh: [== 竞赛经历])
   prizes
@@ -312,8 +279,11 @@ let self-intro = translate(
   translate(en: [== Internship], zh: [== 实习经历])
   quancheng
 
-  translate(en: [== Skills], zh: [== 编程技能])
+  translate(en: [== Skills], zh: [== 技能])
   skills
+
+  translate(en: [== Languages], zh: [== 语言能力])
+  language
   
   // https://github.com/typst/typst/issues/1462
   {
