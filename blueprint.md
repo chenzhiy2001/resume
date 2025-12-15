@@ -7,11 +7,11 @@ Email: chenzhiy2001@qq.com GitHub: https://github.com/chenzhiy2001
 
 ## Education
 
-M. in Computing Science at Utrecht University, the Netherlands  Sep, 2025 - Present
-Selected Courses: Concepts of Programming Language Design, Geometry Algorithms, Probalistic Reasoning, Algorithms for Decision Support
-
 B.E. in Computer Science and Technology at Beijing Technology and Business University, China  Sep, 2019 - Jun, 2023
 Selected Courses: The Design and Analysis of Algorithms, Linux Operating System, C Program Language, Object-Oriented Programming (C++), Computer Networks
+
+M. in Computing Science at Utrecht University, the Netherlands  Sep, 2025 - Present
+Selected Courses: Concepts of Programming Language Design, Geometry Algorithms, Probalistic Reasoning, Algorithms for Decision Support
 
 ## Work Experience
 

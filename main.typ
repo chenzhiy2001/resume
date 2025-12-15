@@ -29,50 +29,112 @@
   )
 
   let edu = {
-    let psu-courses = (
-      ([Math 435], [Abstract Algebra], [抽象代数]),
-      ([Cmpsc 450], [Concurrent Programming], [并发科学编程]),
-      ([Math 427], [Foundations of Geometry], [几何基础]),
-      ([Math 429], [Introduction to Topology], [拓扑学入门]),
-      ([Math 437], [Algebraic Geometry], [代数几何]),
+    // let psu-courses = (
+    //   ([Math 435], [Abstract Algebra], [抽象代数]),
+    //   ([Cmpsc 450], [Concurrent Programming], [并发科学编程]),
+    //   ([Math 427], [Foundations of Geometry], [几何基础]),
+    //   ([Math 429], [Introduction to Topology], [拓扑学入门]),
+    //   ([Math 437], [Algebraic Geometry], [代数几何]),
+    // )
+    let btbu-courses = (
+      ([], [The Design and Analysis of Algorithms], []),
+      ([], [Linux Operating System], []),
+      ([], [C Program Language], []),
+      ([], [Object-Oriented Programming (C++)], []),
+      ([], [Computer Networks], []),
     )
     translate(en: [== Education], zh: [== 教育经历])
-    let gpa = 3.28
-    let psu-date = [#translate-date(8, 2018) -- #translate-date(12, 2022)]
+    let gpa = 3.39// /5.00
+    // let psu-date = [#translate-date(8, 2018) -- #translate-date(12, 2022)]
+    let btbu-date = [#translate-date(9, 2019) -- #translate-date(6, 2023)]
     translate(
       en: cventry(
-        tl: [B.S. in Computer Science at *The Pennsylvania State University*, PA, US],
-        tr: psu-date,
-      )[Minor in Mathematics, GPA #gpa/4.00#noSimple(simple: [,
-        selected courses: #psu-courses.map(item => item.at(0)).join(", ")])[\
-        Selected courses: #psu-courses.map(item => item.at(0) + " " + item.at(1)).join(", ")]],
+        tl: [B.E. in Computer Science and Technology at *Beijing Technology and Business University*, Beijing, China],
+        tr: btbu-date,
+      )[/*Minor in Mathematics, GPA #gpa/4.00*/#noSimple(simple: [,
+        Selected courses: #btbu-courses.map(item => item.at(0)).join(", ")])[
+        Selected courses: #btbu-courses.map(item => item.at(0) + " " + item.at(1)).join(", ")]],
       zh: cventry(
         tl: [宾夕法尼亚州州立大学，计算机科学专业，本科，美国],
-        tr: psu-date,
+        tr: btbu-date,
       )[副专业：数学, GPA #gpa/4.00\
-        部分选修课程：#psu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
+        部分选修课程：#btbu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
     )
 
-    let cmu-courses = (
-      ([15-836], [Substructural Logics], [亚结构逻辑]),
-      ([15-791], [Advanced Topics in Foundations of Types and Programming Languages], [类型和编程语言基础中的高级课题])
+    // let cmu-courses = (
+    //   ([15-836], [Substructural Logics], [亚结构逻辑]),
+    //   ([15-791], [Advanced Topics in Foundations of Types and Programming Languages], [类型和编程语言基础中的高级课题])
+    // )
+
+    let uu-courses = (
+      ([], [Concepts of Programming Language Design], []),
+      ([], [Geometry Algorithms], []),
+      ([], [Probabilistic Reasoning], []),
+      ([], [Algorithms for Decision Support], []),
     )
-    let cmu-date = [#translate-date(8, 2023) -- #current]
+
+    // let cmu-date = [#translate-date(8, 2023) -- #current]
+    let uu-date = [#translate-date(9, 2025) -- #current]
     translate(
       en: cventry(
-        tl: [Ph.D. in Computer Science at *Carnegie Mellon University*, PA, US],
-        tr: cmu-date,
-      )[Advisor: Stephanie Balzer#noSimple(simple: [,
-        selected courses: #cmu-courses.map(item => item.at(0)).join(", ")])[\
-        Selected courses: #cmu-courses.map(item => item.at(0) + " " + item.at(1)).join(", ")]],
+        tl: [M.S. in Computing Science at *Utrecht University*, Utrecht, the Netherlands],
+        tr: uu-date,
+      )[/*Advisor: Stephanie Balzer*/#noSimple(simple: [,
+        Selected courses: #uu-courses.map(item => item.at(0)).join(", ")])[
+        Selected courses: #uu-courses.map(item => item.at(0) + " " + item.at(1)).join(", ")]],
       zh: cventry(
-        tl: [卡内基梅隆大学，计算机科学专业，博士，美国],
-        tr: cmu-date,
+        tl: [乌得勒支大学，计算机科学硕士，荷兰乌得勒支],
+        tr: uu-date,
       )[导师：Stephanie Balzer\
-        部分选修课程：#cmu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
+        部分选修课程：#uu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
     )
   }
 
+  let btbura = {
+    let btbura-date = [#translate-date(8, 2024) -- #translate-date(8, 2025)]
+    translate(
+      en: cventry(
+        tl: [*BTBU*, Beijing, China],
+        tr: btbura-date,
+        bl: [_Project Leader_, Research Assistant],
+      )[#noSimple[
+      - Developed GDB extensions for debugging and profiling asynchronous Rust code via runtime-agnostic static analysis and instrumentation.
+      - Conducted extensive research on both async Rust and OS debugging by summarizing and replicating related papers, identified and documented limitations of existing works.
+      - Developed a comprehensive project plan covering both async Rust and OS debugging, coordinated lab members working on different sub-projects.
+      - Adapted the "code-debug" OS debugging tool to a Linux-compatible, modular Rust OS (“Starry”), enhanced and modularized the tool to facilitate integration with other debuggers.
+      - Built a quantitative student capability analysis tool that provides visualized performance metrics on different course objectives to help adjust teaching plans.
+      ]],
+      zh: cventry(
+        tl: [*todo*，北京，中国],
+        tr: btbura-date,
+        bl: [todo],
+      )[#noSimple[
+      - todo
+      ]],
+    )
+  }
+
+  let quancheng = {
+    let quancheng-date = [#translate-date(1, 2024) -- #translate-date(2, 2024)]
+    translate(
+      en: cventry(
+        tl: [*Quan Cheng Laboratory*, Jinan, China],
+        tr: quancheng-date,
+        bl: [_Secure Operating System Kernel Project_, Flexible Researcher],
+      )[#noSimple[
+      -	Adapted the “code-debug” OS debugging tool for the operating system being developed by the Secure Operating System Kernel Project (ArceOS).
+      -	Prepared support documents and videos based on colleagues' feedback after using the OS debugging tool and simplified the installation and configuration process.
+      -	Promoted the use of the OS debugging tool to students (about 20 in total) who are interested in learning OS at two universities (Beijing Technology and Business University and Henan University of Science and Technology) via video conference.
+      ]],
+      zh: cventry(
+        tl: [*济南全程实验室*，济南，中国],
+        tr: quancheng-date,
+        bl: [安全操作系统内核项目，灵活研究员],
+      )[#noSimple[
+        - todo
+      ]],
+    )
+  }
   let sbrella = {
     let sbrella-date = [#translate-date(2, 2018) -- #translate-date(7, 2018)]
     translate(
@@ -199,6 +261,25 @@
       ],
     )
   }
+  let qiyuan = {
+    let qiyuan-date = [#translate-date(8, 2021) -- #translate-date(8, 2021)]
+    translate(
+      en: cventry(
+        tl: [*Open Source Operating System Summer Camp*, Beijing Qiyuan Laboratory],
+        tr: qiyuan-date,
+      )[
+      - Extensively studied and modified the kernel of the rCore-Tutorial operating system.
+      - Designed and implemented a performance analysis tool similar to htop in Linux based on this operating system.
+      ],
+      zh: cventry(
+        tl: [*启元实验室*，州学院],
+        tr: qiyuan-date,
+      )[
+      - 研究智能合约和区块链系统的形式化验证。
+      - 用 Rust 实现了一个 EVM 字节码的符号执行引擎。
+      ],
+    )
+  }
 
   let mcREU = {
     let reu-date = [#translate-date(5, 2019) -- #translate-date(8, 2019)]
@@ -232,6 +313,23 @@
     )
   }
 
+  let code-debug = {
+    translate(
+      en: cventry(
+        tl: [*Source-level OS Debugging Tools with Rust Language Support*, VSCode Extension (role: project leader)],
+        tr: githublink("chenzhiy2001/code-debug"),
+      )[
+      - Supported source-level tracing and debugging across kernel state and user state based on QEMU and GDB.
+      - Supported performance analysis and monitoring across kernel and user states based on eBPF.
+      - Supported the combination of breakpoint debugging and performance monitoring based on VSCode to build remote development environments.
+      ],
+      zh: cventry(
+        tl: [*code-debug*，一个用于教学和研究的操作系统调试工具（职位：项目组长）],
+        tr: githublink("ice1000/code-debug"),
+      )[
+      ],
+    )
+  }
   let aya = {
     translate(
       en: cventry(
@@ -310,8 +408,8 @@
       - 编译器：理解局部无名表示法、惰性代换（ES）、ANF、(P)HOAS 等技术，理解语义正规化（NbE）及其使用的惰性闭包技术。熟悉大部分 parser 生成器，理解布局的语法解析。
     ])
     let progLang = {
-      let very = "Java Kotlin Rust C# Agda Haskell Arend"
-      let somehow = "Dart C C++ F# F★ Idris Perl MATLAB"
+      let very = "TypeScript/JavaScript Python Rust C C++ Java"
+      let somehow = "Wolfram Haskell Dart R MATLAB"
       translate(en: [
         - Programming Languages: multilingual (not limited to any specific language), especially experienced in #very, comfortable with #somehow (in random order).
       ], zh: [
@@ -325,9 +423,9 @@
       let pest  = link(pref + "12046")[Pest]
       let kala  = link(pref + "17453")[Kala Inspections]
       translate(en: [
-        - IDE Tooling: *6 years of experience*, familiar with the IntelliJ Platform infrastructure (created #julia, #dtlc, #pest, #kala, etc.), also have experience with VSCode plugin development.
+        - IDE Tooling: *4 years of experience*, familiar with VSCode plugin development.
       ], zh: [
-        - IDE 工具开发：*6 年开发经验*，熟悉 IntelliJ 平台的基础设施（开发了 #julia、#dtlc、#pest、#kala 等插件），同时了解 VSCode 的插件开发。
+        - IDE 工具开发：*4 年开发经验*，熟悉 IntelliJ 平台的基础设施（开发了 #julia、#dtlc、#pest、#kala 等插件），同时了解 VSCode 的插件开发。
       ])
     }
     let kotlinJava = {
@@ -346,17 +444,17 @@
       zh: [- 类型论：理解 Martin-Löf 类型论、余归纳法、同伦类型论、立方类型论；熟悉 Idris，Agda（*5 年经验*，编译器和标准库贡献者），Arend 和一些 Lean/F★/Coq。]
     )
     progLang
-    compiler
-    kotlinJava
-    typeTheory
-    noSimple[
-      - *JetBrains MPS*: #translate(
-        en: [understand concepts and applications of #link("https://www.jetbrains.com/mps/")[Language-Oriented Programming].],
-        zh: [理解 #link("https://www.jetbrains.com/mps/")[面向语言编程] 的概念和应用。]
-      )
-    ]
+    // compiler
+    // kotlinJava
+    // typeTheory
+    // noSimple[
+    //   - *JetBrains MPS*: #translate(
+    //     en: [understand concepts and applications of #link("https://www.jetbrains.com/mps/")[Language-Oriented Programming].],
+    //     zh: [理解 #link("https://www.jetbrains.com/mps/")[面向语言编程] 的概念和应用。]
+    //   )
+    // ]
     ideDev
-    noSimple[#mobileDev]
+    // noSimple[#mobileDev]
     devTools
   }
 
@@ -383,78 +481,83 @@
     let cwRank   = [\#111]
     let projects = [*agda, Arend, libgdx, jacoco, KaTeX, shields.io, grpc-rs, intellij-solidity, intellij-haskell, intellij-rust, TeXiFy-IDEA, rust-analyzer*]
 
-    translate(en: noSimple(simple: [
-      - Profile links (please use a PDF reader with hyperlink support):
-        #link(crates)[Crates.io],
-        #link(intellij)[IntelliJ] Marketplace
-    ])[
-      - Crates.io: #link(crates), publishing interesting Rust libraries
-      - IntelliJ Marketplace: #link(intellij)
-    ], zh: [
-      - 相关个人页面链接（请使用支持超链接的 PDF 阅读器）：#link(crates)[Crates.io] 主页，#link(intellij)[IntelliJ] 插件市场主页
-    ])
+    // translate(en: noSimple(simple: [
+    //   - Profile links (please use a PDF reader with hyperlink support):
+    //     #link(crates)[Crates.io],
+    //     #link(intellij)[IntelliJ] Marketplace
+    // ])[
+    //   - Crates.io: #link(crates), publishing interesting Rust libraries
+    //   - IntelliJ Marketplace: #link(intellij)
+    // ], zh: [
+    //   - 相关个人页面链接（请使用支持超链接的 PDF 阅读器）：#link(crates)[Crates.io] 主页，#link(intellij)[IntelliJ] 插件市场主页
+    // ])
     translate(
-      en: [- Languages: English - fluent (TOEFL 100), Chinese - native speaker],
-      zh: [- 语言：English - 熟练 (托福 100)，汉语 - 母语水平]
+      en: [- Languages: English - fluent (IELTS 7.5), Chinese - native speaker],
+      zh: [- 语言：English - 熟练 (雅思：7.5)，汉语 - 母语水平]
     )
-    translate(
-      en: [
-        - Open-source contributions: #osc, #noSimple[member of JuliaEditorSupport, agda, pest-parser, EmmyLua, arend-lang and more,]
-          contributed to #projects and other projects #noSimple[(apart from organization ones)]
-      ],
-      zh: [- 开源贡献: #osc，向 #projects 等项目贡献过代码]
-    )
-    [- #link("https://stackoverflow.com/users/7083401/ice1000")[StackOverflow]: #seRep
-      #translate(
-        en: [reputation, also active on #pase (#paRep reputation) and #stackex("other StackExchange sites")],
-        zh: [声誉，同时也在 #pase（#paRep 声誉）和#stackex("其他 StackExchange 子站")活跃]
-      )
-    ]
-    translate(
-      en: [
-        - Latest revision of this resume: one-page version #enSimple, complete version: #enElab
-        #noSimple[- Get the Chinese version of this resume: #cnLink]
-      ],
-      zh: [- 获取此简历的最新更新：中文版本 #cnLink，英语版本 #enElab，单页版本（仅英语）：#enSimple]
-    )
-    translate(
-      en: [
-        - #cwLevel on #codewars, ranked #cwRank on the whole site (Top #cwPerc),
-          #noSimple[solving and making new coding challenges] primarily in Haskell, Agda, and Idris
-          #noSimple[and some other JVM languages]
-      ],
-      zh: [- 在 #codewars 上，以 Haskell、Agda 和 Idris 为主，达到 #cwLevel，全站排名 #cwRank（前 #cwPerc）]
-    )
+    // translate(
+    //   en: [
+    //     - Open-source contributions: #osc, #noSimple[member of JuliaEditorSupport, agda, pest-parser, EmmyLua, arend-lang and more,]
+    //       contributed to #projects and other projects #noSimple[(apart from organization ones)]
+    //   ],
+    //   zh: [- 开源贡献: #osc，向 #projects 等项目贡献过代码]
+    // )
+    // [- #link("https://stackoverflow.com/users/7083401/ice1000")[StackOverflow]: #seRep
+    //   #translate(
+    //     en: [reputation, also active on #pase (#paRep reputation) and #stackex("other StackExchange sites")],
+    //     zh: [声誉，同时也在 #pase（#paRep 声誉）和#stackex("其他 StackExchange 子站")活跃]
+    //   )
+    // ]
+    // translate(
+    //   en: [
+    //     - Latest revision of this resume: one-page version #enSimple, complete version: #enElab
+    //     #noSimple[- Get the Chinese version of this resume: #cnLink]
+    //   ],
+    //   zh: [- 获取此简历的最新更新：中文版本 #cnLink，英语版本 #enElab，单页版本（仅英语）：#enSimple]
+    // )
+    // translate(
+    //   en: [
+    //     - #cwLevel on #codewars, ranked #cwRank on the whole site (Top #cwPerc),
+    //       #noSimple[solving and making new coding challenges] primarily in Haskell, Agda, and Idris
+    //       #noSimple[and some other JVM languages]
+    //   ],
+    //   zh: [- 在 #codewars 上，以 Haskell、Agda 和 Idris 为主，达到 #cwLevel，全站排名 #cwRank（前 #cwPerc）]
+    // )
   }
 
   // Start of the document
 
-  translate(en: [= #smallcaps[Tesla Zhang]], zh: [= #smallcaps[Tesla Zhang] (千里冰封)])
+  translate(en: [= #smallcaps[Zhiyang Chen]], zh: [= #smallcaps[Zhiyang Chen] (陈志扬)])
 
-  [#link("mailto:ice1000kotlin@gmail.com")[ice1000kotlin\@gmail.com] $dot.c$ #iconlink("https://ice1000.org") $dot.c$ #iconlink("https://github.com/ice1000", icon: "github")]
+  [#link("mailto:chenzhiy2001@qq.com")[chenzhiy2001\@qq.com] $dot.c$ /*#iconlink("https://ice1000.org") $dot.c$ */#iconlink("https://github.com/chenzhiy2001", icon: "github")]
 
   edu
 
   translate(en: [== Work Experience], zh: [== 工作经历])
-  jetbrains
-  plct
-  risingwave
-  sbrella
-  pingcap
+  btbura
+  quancheng
+  // jetbrains
+  // plct
+  // risingwave
+  // sbrella
+  // pingcap
 
   translate(en: [== Related Projects], zh: [== 项目经历])
-  aya
-  intellijPest
-  noSimple[
-    #arendVSCode
-    #arendIO
-  ]
+  code-debug
+  // aya
+  // intellijPest
+  // noSimple[
+  //   #arendVSCode
+  //   #arendIO
+  // ]
 
-  noSimple[
-    #translate(en: [== Academic Experience], zh: [== 学术经历])
-    #mcREU
-    #la461
-  ]
+  // noSimple[
+  //   #translate(en: [== Academic Experience], zh: [== 学术经历])
+  //   #qiyuan
+  //   // #dachuang
+  //   // #mcREU
+  //   // #la461
+  // ]
 
   translate(en: [== Skills], zh: [== 技能])
   skills
@@ -465,10 +568,11 @@
   // https://github.com/typst/typst/issues/1462
   {
     set text(size: 0pt)
-    [@SIT]
-    noSimple[@ExactlyApplied, @Guest, @ExtTyApp, @FordHelix]
+    [@11103326, @chen2022online, @patent2024, @patent2021]
+    // [@SIT]
+    // noSimple[@ExactlyApplied, @Guest, @ExtTyApp, @FordHelix]
   }
-  translate(en: [== Publications & Preprints], zh: [== 论文发表 & 预印本])
+  translate(en: [== Publications & Patents], zh: [== 论文与专利发表])
   bibliography("pub.bib", title: none)
 }
 
