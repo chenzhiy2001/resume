@@ -29,37 +29,7 @@
   )
 
   let edu = {
-    // let psu-courses = (
-    //   ([Math 435], [Abstract Algebra], [抽象代数]),
-    //   ([Cmpsc 450], [Concurrent Programming], [并发科学编程]),
-    //   ([Math 427], [Foundations of Geometry], [几何基础]),
-    //   ([Math 429], [Introduction to Topology], [拓扑学入门]),
-    //   ([Math 437], [Algebraic Geometry], [代数几何]),
-    // )
-    let btbu-courses = (
-      ([], [The Design and Analysis of Algorithms], []),
-      ([], [Linux Operating System], []),
-      ([], [C Program Language], []),
-      ([], [Object-Oriented Programming (C++)], []),
-      ([], [Computer Networks], []),
-    )
     translate(en: [== Education], zh: [== 教育经历])
-    let gpa = 3.39// /5.00
-    // let psu-date = [#translate-date(8, 2018) -- #translate-date(12, 2022)]
-    let btbu-date = [#translate-date(9, 2019) -- #translate-date(6, 2023)]
-    translate(
-      en: cventry(
-        tl: [B.E. in Computer Science and Technology at *Beijing Technology and Business University*, Beijing, China],
-        tr: btbu-date,
-      )[/*Minor in Mathematics, GPA #gpa/4.00*/#noSimple(simple: [,
-        Selected courses: #btbu-courses.map(item => item.at(0)).join(", ")])[
-        Selected courses: #btbu-courses.map(item => item.at(0) + " " + item.at(1)).join(", ")]],
-      zh: cventry(
-        tl: [宾夕法尼亚州州立大学，计算机科学专业，本科，美国],
-        tr: btbu-date,
-      )[副专业：数学, GPA #gpa/4.00\
-        部分选修课程：#btbu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
-    )
 
     // let cmu-courses = (
     //   ([15-836], [Substructural Logics], [亚结构逻辑]),
@@ -71,6 +41,7 @@
       ([], [Geometry Algorithms], []),
       ([], [Probabilistic Reasoning], []),
       ([], [Algorithms for Decision Support], []),
+      ([], [Advanced Algorithms], []),
     )
 
     // let cmu-date = [#translate-date(8, 2023) -- #current]
@@ -87,6 +58,37 @@
         tr: uu-date,
       )[导师：Stephanie Balzer\
         部分选修课程：#uu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
+    )
+        // let psu-courses = (
+    //   ([Math 435], [Abstract Algebra], [抽象代数]),
+    //   ([Cmpsc 450], [Concurrent Programming], [并发科学编程]),
+    //   ([Math 427], [Foundations of Geometry], [几何基础]),
+    //   ([Math 429], [Introduction to Topology], [拓扑学入门]),
+    //   ([Math 437], [Algebraic Geometry], [代数几何]),
+    // )
+    let btbu-courses = (
+      ([], [The Design and Analysis of Algorithms], []),
+      ([], [Linux Operating System], []),
+      ([], [C Program Language], []),
+      ([], [Object-Oriented Programming (C++)], []),
+      ([], [Computer Networks], []),
+    )
+
+    let gpa = 3.39// /5.00
+    // let psu-date = [#translate-date(8, 2018) -- #translate-date(12, 2022)]
+    let btbu-date = [#translate-date(9, 2019) -- #translate-date(6, 2023)]
+    translate(
+      en: cventry(
+        tl: [B.E. in Computer Science and Technology at *Beijing Technology and Business University*, Beijing, China],
+        tr: btbu-date,
+      )[/*Minor in Mathematics, GPA #gpa/4.00*/#noSimple(simple: [,
+        Selected courses: #btbu-courses.map(item => item.at(0)).join(", ")])[
+        Selected courses: #btbu-courses.map(item => item.at(0) + " " + item.at(1)).join(", ")]],
+      zh: cventry(
+        tl: [宾夕法尼亚州州立大学，计算机科学专业，本科，美国],
+        tr: btbu-date,
+      )[副专业：数学, GPA #gpa/4.00\
+        部分选修课程：#btbu-courses.map(item => item.at(0) + " " + item.at(2)).join(", ")],
     )
   }
 
@@ -310,6 +312,41 @@
         tl: [*Cmpsc 461 课程助教*（课程标题：编程语言概念），州学院],
         tr: la461-date,
       )[],
+    )
+  }
+
+  let async-rust-debugger = {
+    translate(
+      en: cventry(
+        tl: [*Async Rust Debugger*, GDB extension for debugging asynchronous Rust code],
+        tr: githublink("chenzhiy2001/async-rust-debugger"),
+      )[
+      - Developed a GDB extension in Python to trace and debug async Rust coroutines at runtime.
+      - Implemented whitelist-based function tracing with prefix matching support for flexible instrumentation.
+      - Visualized async call chains, poll events, and await points to help understand async state machine execution.
+      ],
+      zh: cventry(
+        tl: [*Async Rust Debugger*，用于调试异步 Rust 代码的 GDB 扩展],
+        tr: githublink("btbuRustDebugTeam/async-rust-debugger"),
+      )[
+      ],
+    )
+  }
+
+  let tradebot = {
+    translate(
+      en: cventry(
+        tl: [*Tradebot*, Automated trading bot for cryptocurrency markets],
+        tr: githublink("chenzhiy2001/tradebot"),
+      )[
+      - Built a Python-based automated trading system with configurable buy/sell strategies and rate thresholds.
+      - Implemented trade logging and monitoring capabilities for tracking trading decisions and performance.
+      ],
+      zh: cventry(
+        tl: [*Tradebot*，加密货币自动交易机器人],
+        tr: githublink("chenzhiy2001/tradebot"),
+      )[
+      ],
     )
   }
 
@@ -543,6 +580,8 @@
   // pingcap
 
   translate(en: [== Related Projects], zh: [== 项目经历])
+  async-rust-debugger
+  tradebot
   code-debug
   // aya
   // intellijPest
