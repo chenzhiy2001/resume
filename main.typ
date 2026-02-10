@@ -333,23 +333,6 @@
     )
   }
 
-  let tradebot = {
-    translate(
-      en: cventry(
-        tl: [*Tradebot*, Automated trading bot for cryptocurrency markets],
-        tr: githublink("chenzhiy2001/tradebot"),
-      )[
-      - Built a Python-based automated trading system with configurable buy/sell strategies and rate thresholds.
-      - Implemented trade logging and monitoring capabilities for tracking trading decisions and performance.
-      ],
-      zh: cventry(
-        tl: [*Tradebot*，加密货币自动交易机器人],
-        tr: githublink("chenzhiy2001/tradebot"),
-      )[
-      ],
-    )
-  }
-
   let code-debug = {
     translate(
       en: cventry(
@@ -581,7 +564,6 @@
 
   translate(en: [== Related Projects], zh: [== 项目经历])
   async-rust-debugger
-  tradebot
   code-debug
   // aya
   // intellijPest
